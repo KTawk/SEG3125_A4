@@ -42,25 +42,25 @@ const Navbar = () => {
   <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold text-gray-700">
   <Link
     to="/"
-    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gray-700 hover:after:w-full after:transition-all after:duration-300"
   >
     Home
   </Link>
   <Link
     to="/shop"
-    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gray-700  hover:after:w-full after:transition-all after:duration-300"
   >
     Shop
   </Link>
   <Link
     to="/contact"
-    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gray-700  hover:after:w-full after:transition-all after:duration-300"
   >
     Contact
   </Link>
   <Link
     to="/about"
-    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gray-700  hover:after:w-full after:transition-all after:duration-300"
   >
     About
   </Link>
