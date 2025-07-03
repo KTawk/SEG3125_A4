@@ -39,20 +39,35 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='flex items-center justify-center space-x-10 py-4 text-sm font-bold'>
-        <Link className='hover:underline'>
-          Home 
-        </Link>
-        <Link className='hover:underline'>
-          Shop
-        </Link>
-        <Link className='hover:underline'>
-          Contact 
-        </Link>
-        <Link className='hover:underline'>
-          About
-        </Link>
-      </div>
+  <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold text-gray-700">
+  <Link
+    to="/"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+  >
+    Home
+  </Link>
+  <Link
+    to="/shop"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+  >
+    Shop
+  </Link>
+  <Link
+    to="/contact"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+  >
+    Contact
+  </Link>
+  <Link
+    to="/about"
+    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-black hover:after:w-full after:transition-all after:duration-300"
+  >
+    About
+  </Link>
+</div>
+
+
+     
     </nav>
   );
 };
