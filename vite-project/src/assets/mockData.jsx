@@ -5,7 +5,18 @@ import Image2_1 from "./Images/MacbookAirM2_Midnight.png";
 
 
 
-
+import Image20 from "./Images/Image20.png";
+import Image20_1 from "./Images/Image20_1.png";
+import Image21 from "./Images/Image21.png";
+import Image21_1 from "./Images/Image21_1.png";
+import Image22 from "./Images/Image22.png";
+import Image22_1 from "./Images/Image22_1.png";
+import Image23 from "./Images/Image23.png";
+import Image23_1 from "./Images/Image23_1.png";
+import Image23_2 from "./Images/Image23_2.png";
+import Image24 from "./Images/Image24.png";
+import Image24_1 from "./Images/Image24_1.png";
+import Image25 from "./Images/Image25.avif";
 import Image26 from "./Images/Image26.png";
 import Image26_1 from "./Images/Image26_1.png";
 import Image26_2 from "./Images/Image26_2.png";
