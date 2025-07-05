@@ -44,6 +44,60 @@ import Image19_1 from "./Images/OnePlus11_EternalGreen.png";
 
 
 
+
+
+import Image20 from "./Images/Image20.png";
+import Image20_1 from "./Images/Image20_1.png";
+import Image21 from "./Images/Image21.png";
+import Image21_1 from "./Images/Image21_1.png";
+import Image22 from "./Images/Image22.png";
+import Image22_1 from "./Images/Image22_1.png";
+import Image23 from "./Images/Image23.png";
+import Image23_1 from "./Images/Image23_1.png";
+import Image23_2 from "./Images/Image23_2.png";
+import Image24 from "./Images/Image24.png";
+import Image24_1 from "./Images/Image24_1.png";
+import Image25 from "./Images/Image25.avif";
+import Image26 from "./Images/Image26.png";
+import Image26_1 from "./Images/Image26_1.png";
+import Image26_2 from "./Images/Image26_2.png";
+import Image27 from "./Images/Image27.jpg";
+import Image27_1 from "./Images/Image27_1.webp";
+import Image28 from "./Images/Image28.jpg";
+import Image28_1 from "./Images/Image28_1.jpg";
+import Image29 from "./Images/Image29.jpg";
+import Image30 from "./Images/Image30.jpg";
+import Image30_1 from "./Images/Image30_1.jpg";
+import Image31 from "./Images/Image31.png";
+import Image31_1 from "./Images/Image30_1.png";
+import Image32 from "./Images/Image32.jpg";
+import Image33 from "./Images/Image33.png";
+import Image34 from "./Images/Image34.png";
+import Image35 from "./Images/Image35.png";
+import Image36 from "./Images/Image36.png";
+import Image37 from "./Images/Image37.png";
+import Image38 from "./Images/Image38.png";
+import Image39 from "./Images/Image39.png";
+import Image40 from "./Images/Image40.png";
+import Image40_1 from "./Images/Image40_1.png";
+import Image41 from "./Images/Image41.webp";
+import Image41_1 from "./Images/Image41_1.png";
+import Image42 from "./Images/Image42.webp";
+import Image42_1 from "./Images/Image42_1.webp";
+import Image42_2 from "./Images/Image42_2.png";
+import Image43 from "./Images/Image43.png";
+import Image43_1 from "./Images/Image43_1.webp";
+import Image44 from "./Images/Image44.png";
+import Image45 from "./Images/Image45.png";
+import Image46 from "./Images/Image46.webp";
+import Image47 from "./Images/Image47.png";
+import Image47_1 from "./Images/Image47_1.png";
+import Image48 from "./Images/Image48.png";
+import Image49 from "./Images/Image49.png";
+import Image50 from "./Images/Image50.png";
+import Image50_1 from "./Images/Image50_1.png";
+import Image51 from "./Images/Image51.png";
+
 export const Categories = [
   "Laptops",
   "Phones",
@@ -382,8 +436,8 @@ export const mockData = [
   },
   {
     id: 27,
-    image: Image7,
     images: {Image27, Image27_1},
+    name: "Galaxy Tab A7 Lite",
     price: 159.99,
     category: "Tablets",
     brand: "Samsung",
