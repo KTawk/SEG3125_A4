@@ -39,7 +39,7 @@ export const mockData = [
   },
   {
     id: 3,
-    image: Image3,
+    images: {Image3, Image3_1},
     name: "XPS 13",
     price: 1199.99,
     category: "Laptops",
@@ -51,7 +51,7 @@ export const mockData = [
   },
   {
     id: 4,
-    image: Image4,
+    images: {Image4, Image4_1},
     name: "XPS 15",
     price: 1599.99,
     category: "Laptops",
@@ -63,7 +63,7 @@ export const mockData = [
   },
   {
     id: 5,
-    image: Image5,
+    images: {Image5},
     name: "ThinkPad X1 Carbon Gen 11",
     price: 1599.99,
     category: "Laptops",
@@ -75,7 +75,7 @@ export const mockData = [
   },
   {
     id: 6,
-    image: Image6,
+    images: {Image6},
     name: "Yoga Slim 7i",
     price: 999.99,
     category: "Laptops",
@@ -87,7 +87,7 @@ export const mockData = [
   },
   {
     id: 7,
-    image: Image7,
+    images: {Image7, Image7_1},
     name: "Spectre x360 14",
     price: 1399.99,
     category: "Laptops",
@@ -99,7 +99,7 @@ export const mockData = [
   },
   {
     id: 8,
-    image: Image8,
+    images: {Image8},
     name: "ENVY 15",
     price: 1199.99,
     category: "Laptops",
@@ -111,7 +111,7 @@ export const mockData = [
   },
   {
     id: 9,
-    image: Image9,
+    images: {Image9, Image9_1},
     name: "ZenBook 14",
     price: 1099.99,
     category: "Laptops",
@@ -123,7 +123,7 @@ export const mockData = [
   },
   {
     id: 10,
-    image: Image10,
+    images: {Image10},
     name: "ROG Zephyrus G14",
     price: 1499.99,
     category: "Laptops",
@@ -135,7 +135,7 @@ export const mockData = [
   },
   {
     id: 11,
-    image: Image1,
+    images: {Image11, Image11_1},
     name: "Surface Laptop 5",
     price: 1299.99,
     category: "Laptops",
@@ -147,7 +147,7 @@ export const mockData = [
   },
   {
     id: 12,
-    image: Image2,
+    images: {Image12},
     name: "Swift 3",
     price: 799.99,
     category: "Laptops",
@@ -161,7 +161,7 @@ export const mockData = [
   // Phones
   {
     id: 13,
-    image: Image3,
+    images: {Image13, Image13_1, Image13_2},
     name: "iPhone 15",
     price: 999.99,
     category: "Phones",
@@ -174,7 +174,7 @@ export const mockData = [
   },
   {
     id: 14,
-    image: Image4,
+    images: {Image14, Image14_1, Image14_2, Image14_3},
     name: "iPhone 15 Pro",
     price: 1199.99,
     category: "Phones",
@@ -187,7 +187,7 @@ export const mockData = [
   },
   {
     id: 15,
-    image: Image5,
+    images: {Image15, Image15_1, Image15_2},
     name: "Galaxy S24",
     price: 899.99,
     category: "Phones",
@@ -200,7 +200,7 @@ export const mockData = [
   },
   {
     id: 16,
-    image: Image6,
+    images: {Image16, Image16_1, Image16_2},
     name: "Galaxy S24+",
     price: 999.99,
     category: "Phones",
@@ -213,7 +213,7 @@ export const mockData = [
   },
   {
     id: 17,
-    image: Image7,
+    images: {Image17, Image17_1, Image17_2},
     name: "Pixel 8",
     price: 699.99,
     category: "Phones",
@@ -226,7 +226,7 @@ export const mockData = [
   },
   {
     id: 18,
-    image: Image8,
+    images: {Image18, Image18_1, Image18_2},
     name: "Pixel 8 Pro",
     price: 999.99,
     category: "Phones",
@@ -239,7 +239,7 @@ export const mockData = [
   },
   {
     id: 19,
-    image: Image9,
+    images: {Image19, Image19_1},
     name: "OnePlus 11",
     price: 749.99,
     category: "Phones",
@@ -252,7 +252,7 @@ export const mockData = [
   },
   {
     id: 20,
-    image: Image10,
+    images: {Image20, Image20_1},
     name: "OnePlus 11 Pro",
     price: 799.99,
     category: "Phones",
@@ -265,7 +265,7 @@ export const mockData = [
   },
   {
     id: 21,
-    image: Image1,
+    images: {Image21, Image21_1},
     name: "Xiaomi 13",
     price: 799.99,
     category: "Phones",
@@ -278,7 +278,7 @@ export const mockData = [
   },
   {
     id: 22,
-    image: Image2,
+    images: {Image22, Image22_1},
     name: "Xiaomi 13 Pro",
     price: 849.99,
     category: "Phones",
@@ -293,7 +293,7 @@ export const mockData = [
   // Tablets (new items id 23-30)
   {
     id: 23,
-    image: Image3,
+    images: {Image23, Image23_1, Image23_2},
     name: "iPad Mini",
     price: 499.99,
     category: "Tablets",
@@ -305,7 +305,7 @@ export const mockData = [
   },
   {
     id: 24,
-    image: Image4,
+    images: {Image24, Image24_1},
     name: "Galaxy Tab S7 FE",
     price: 549.99,
     category: "Tablets",
@@ -317,7 +317,7 @@ export const mockData = [
   },
   {
     id: 25,
-    image: Image5,
+    images: {Image25},
     name: "Tab P11",
     price: 329.99,
     category: "Tablets",
@@ -329,7 +329,7 @@ export const mockData = [
   },
   {
     id: 26,
-    image: Image6,
+    images: {Image26, Image26_1, Image26_2},
     name: "Fire HD 8",
     price: 89.99,
     category: "Tablets",
@@ -342,7 +342,7 @@ export const mockData = [
   {
     id: 27,
     image: Image7,
-    name: "Galaxy Tab A7 Lite",
+    images: {Image27, Image27_1},
     price: 159.99,
     category: "Tablets",
     brand: "Samsung",
@@ -353,7 +353,7 @@ export const mockData = [
   },
   {
     id: 28,
-    image: Image8,
+    images: {Image28, Image28_1},
     name: "Pixel Tablet",
     price: 499.99,
     category: "Tablets",
@@ -365,7 +365,7 @@ export const mockData = [
   },
   {
     id: 29,
-    image: Image9,
+    images: {Image29},
     name: "Tab M10 FHD Plus",
     price: 199.99,
     category: "Tablets",
@@ -377,7 +377,7 @@ export const mockData = [
   },
   {
     id: 30,
-    image: Image10,
+    images: {Image30, Image30_1},
     name: "Surface Pro 9",
     price: 999.99,
     category: "Tablets",
@@ -391,7 +391,7 @@ export const mockData = [
   // TVs (new items id 31-38)
   {
     id: 31,
-    image: Image1,
+    images: {Image31, Image31_1},
     name: "Samsung Frame 55″",
     price: 1499.99,
     category: "TVs",
@@ -399,11 +399,11 @@ export const mockData = [
     screenSize: "55″",
     resolution: "4K UHD",
     smartTv: true,
-    colors: ["Beige Frame", "White Frame"],
+    colors: ["Beige", "White"],
   },
   {
     id: 32,
-    image: Image2,
+    images: {Image32},
     name: "LG C2 OLED 42″",
     price: 1299.99,
     category: "TVs",
@@ -415,7 +415,7 @@ export const mockData = [
   },
   {
     id: 33,
-    image: Image3,
+    images: {Image33},
     name: "Sony X80L 50″",
     price: 599.99,
     category: "TVs",
@@ -427,7 +427,7 @@ export const mockData = [
   },
   {
     id: 34,
-    image: Image4,
+    images: {Image34},
     name: "TCL 65″ Q6 QLED",
     price: 799.99,
     category: "TVs",
@@ -439,7 +439,7 @@ export const mockData = [
   },
   {
     id: 35,
-    image: Image5,
+    images: {Image35},
     name: "Hisense U6G 55″",
     price: 699.99,
     category: "TVs",
@@ -451,7 +451,7 @@ export const mockData = [
   },
   {
     id: 36,
-    image: Image6,
+    images: {Image36},
     name: "Vizio M-Series 65″",
     price: 999.99,
     category: "TVs",
@@ -463,7 +463,7 @@ export const mockData = [
   },
   {
     id: 37,
-    image: Image7,
+    images: {Image37},
     name: "Philips Ambilight 55″",
     price: 1199.99,
     category: "TVs",
@@ -475,7 +475,7 @@ export const mockData = [
   },
   {
     id: 38,
-    image: Image8,
+    images: {Image38},
     name: "Panasonic TX-43JX750",
     price: 499.99,
     category: "TVs",
@@ -489,7 +489,7 @@ export const mockData = [
   // Accessories (new items id 39-51)
   {
     id: 39,
-    image: Image9,
+    images: {Image39},
     name: "MagSafe Charger",
     price: 39.99,
     category: "Accessories",
@@ -500,7 +500,7 @@ export const mockData = [
   },
   {
     id: 40,
-    image: Image10,
+    images: {Image40, Image40_1},
     name: "Wireless Charger Duo",
     price: 79.99,
     category: "Accessories",
@@ -511,7 +511,7 @@ export const mockData = [
   },
   {
     id: 41,
-    image: Image1,
+    images: {Image41, Image41_1},
     name: "MX Master 3 Mouse",
     price: 99.99,
     category: "Accessories",
@@ -521,7 +521,7 @@ export const mockData = [
   },
   {
     id: 42,
-    image: Image2,
+    images: {Image42, Image42_1, Image42_2},
     name: "K380 Bluetooth Keyboard",
     price: 39.99,
     category: "Accessories",
@@ -531,7 +531,7 @@ export const mockData = [
   },
   {
     id: 43,
-    image: Image3,
+    images: {Image43, Image43_1},
     name: "PowerLine+ USB-C Cable",
     price: 19.99,
     category: "Accessories",
@@ -541,7 +541,7 @@ export const mockData = [
   },
   {
     id: 44,
-    image: Image4,
+    images: {Image44},
     name: "SanDisk Extreme 128GB SD Card",
     price: 24.99,
     category: "Accessories",
@@ -551,7 +551,7 @@ export const mockData = [
   },
   {
     id: 45,
-    image: Image5,
+    images: {Image45},
     name: "Surge Protector 6-Outlet",
     price: 29.99,
     category: "Accessories",
@@ -561,7 +561,7 @@ export const mockData = [
   },
   {
     id: 46,
-    image: Image6,
+    images: {Image46},
     name: "C920 HD Webcam",
     price: 69.99,
     category: "Accessories",
@@ -571,7 +571,7 @@ export const mockData = [
   },
   {
     id: 47,
-    image: Image7,
+    images: {Image47, Image47_1},
     name: "Yeti USB Microphone",
     price: 129.99,
     category: "Accessories",
@@ -581,7 +581,7 @@ export const mockData = [
   },
   {
     id: 48,
-    image: Image8,
+    images: {Image48},
     name: "DeathAdder V2 Mouse",
     price: 49.99,
     category: "Accessories",
@@ -591,7 +591,7 @@ export const mockData = [
   },
   {
     id: 49,
-    image: Image9,
+    images: {Image49},
     name: "K95 RGB Keyboard",
     price: 199.99,
     category: "Accessories",
@@ -601,7 +601,7 @@ export const mockData = [
   },
   {
     id: 50,
-    image: Image10,
+    images: {Image50, Image50_1},
     name: "WH-CH710N Headphones",
     price: 149.99,
     category: "Accessories",
@@ -611,7 +611,7 @@ export const mockData = [
   },
   {
     id: 51,
-    image: Image1,
+    images: {Image51},
     name: "SoundLink II Speaker",
     price: 179.99,
     category: "Accessories",
