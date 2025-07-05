@@ -2,6 +2,47 @@ import Image1 from "./Images/MacBookPro14_Silver.png";
 import Image1_1 from "./Images/MacbookPro14_SpaceGray.png";
 import Image2 from "./Images/MacBookAirM2_Silver.png";
 import Image2_1 from "./Images/MacbookAirM2_Midnight.png"; 
+import Image3 from "./Images/XPS13_Silver.png";
+import Image3_1 from "./Images/XPS13_Black.jpg";
+import Image4 from "./Images/XPS15_Black.png";
+import Image4_1 from "./Images/XPS15_Silver.jpg";
+import Image5 from "./Images/ThinkPadX1CarbonGen11_Black.jpg";
+import Image6 from "./Images/YogaSlim7i_MineralGrey.jpg";
+import Image7 from "./Images/Spectrex36014_NightfallBlack.webp";
+import Image7_1 from "./Images/Spectrex36014_PoseidonBlue.webp";
+import Image8 from "./Images/ENVY15_MicaSilver.jpg";
+import Image9 from "./Images/ZenBook14_PineGrey.jpg";
+import Image9_1 from "./Images/ZenBook14_LilacMist.webp";
+import Image10 from "./Images/ROGZephyrusG14_EclipseGray.jpg";
+import Image11 from "./Images/SurfaceLaptop 5_Platinum.webp";
+import Image11_1 from "./Images/SurfaceLaptop 5_MatteBlack.jpg"; 
+import Image12 from "./Images/Swift3_Silver.jpg";   
+import Image12_1 from "./Images/Swift3_Gold.jpg";
+import Image13 from "./Images/iPhone15_Yellow.png";
+import Image13_1 from "./Images/iPhone15_Blue.png";
+import Image13_2 from "./Images/iPhone15_Pink.png";
+import Image13_3 from "./Images/iPhone15_Green.png";
+import Image14 from "./Images/iPhone15Pro_White.png";
+import Image14_1 from "./Images/iPhone15Pro_Gold.png";
+import Image14_2 from "./Images/iPhone15Pro_Black.png";
+import Image14_3 from "./Images/iPhone15Pro_Silver.png";
+import Image15 from "./Images/GalaxyS24_PhantomBlack.png";
+import Image15_1 from "./Images/GalaxyS24_Cream.png";
+import Image15_2 from "./Images/GalaxyS24_Graphite.png";
+import Image16 from "./Images/GalaxyS24Plus_PhantomBlack.png";
+import Image16_1 from "./Images/GalaxyS24Plus_LightViolet.png";
+import Image16_2 from "./Images/GalaxyS24Plus_Green.png";
+import Image17 from "./Images/Pixel8_Lemongrass.png";
+import Image17_1 from "./Images/Pixel8_Obsidian.png";
+import Image17_2 from "./Images/Pixel8_Rose.png";  
+import Image18 from "./Images/Pixel8Pro_Hazel.png"; 
+import Image18_1 from "./Images/Pixel8Pro_Bay.png";
+import Image18_2 from "./Images/Pixel8Pro_Obsidian.png";
+import Image19 from "./Images/OnePlus11_MirrorBlack.png";
+import Image19_1 from "./Images/OnePlus11_EternalGreen.png";
+
+
+
 
 export const Categories = [
   "Laptops",
@@ -161,7 +202,7 @@ export const mockData = [
   // Phones
   {
     id: 13,
-    images: {Image13, Image13_1, Image13_2},
+    images: {Image13, Image13_1, Image13_2, Image13_3},
     name: "iPhone 15",
     price: 999.99,
     category: "Phones",
@@ -170,7 +211,7 @@ export const mockData = [
     ram: "6 GB",
     storage: "128 GB",
     camera: "48 MP",
-    colors: ["Black", "White", "Red"],
+    colors: ["Yellow", "Blue", "Pink", "Green"],
   },
   {
     id: 14,
@@ -183,11 +224,11 @@ export const mockData = [
     ram: "8 GB",
     storage: "256 GB",
     camera: "48 MP",
-    colors: ["Graphite", "Gold", "Silver", "Blue"],
+    colors: ["White", "Gold", "Black", "Silver"],
   },
   {
     id: 15,
-    images: {Image15, Image15_1, Image15_2},
+    images: {Image15, Image15_1, Image15_2, Image15_3},
     name: "Galaxy S24",
     price: 899.99,
     category: "Phones",
