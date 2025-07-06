@@ -69,7 +69,7 @@ const Navbar = () => {
 
      {/* Secondary nav */}
 <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold text-gray-700">
-  {['/', '/shop', '/contact', '/about'].map((path, i) => {
+  {['/', '/shop', '/contact'].map((path, i) => {
     const label = ['Home', 'Shop', 'Contact', 'About'][i];
     return (
       <Link
