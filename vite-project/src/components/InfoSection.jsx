@@ -38,8 +38,10 @@ const infoItems = [
 ];
 
 const InfoSection = () => (
-  <div className="bg-white pt-20 pb-20 px-12">
+  <div className="bg-white pt-40 pb-20 px-12">
+    <h2 className="text-4xl font-bold text-center">Shop by Category</h2> <br/> <br/><br/>
     <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
       {infoItems.map((item, idx) => (
         <Link
           key={idx}

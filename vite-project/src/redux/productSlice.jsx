@@ -1,8 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit";
+import { mockData } from "../assets/mockData";
 
+// productSlice.js
 const initialState = {
-    products: [],
-}
+  products: mockData,   // preload here
+  /* … */
+};
+
 
 const productSlice = createSlice({
     name: 'products',

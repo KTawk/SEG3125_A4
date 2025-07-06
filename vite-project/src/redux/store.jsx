@@ -1,12 +1,24 @@
-import {configureStore} from "@reduxjs/toolkit";
-import cartSlice from "./cartSlice";
-import productSlice from "./productSlice";
+import { configureStore } from '@reduxjs/toolkit'
+import cartReducer from './cartSlice'
+import { loadCartState, saveCartState } from '../utils/localStorage'
+import productReducer from './productSlice' // assuming you have a productSlice
+
+const preloadedCart = loadCartState()
 
 const store = configureStore({
-    reducer: {
-        cart: cartSlice,
-        product: productSlice
-    }
-});
+  reducer: {
+    product: productReducer, // assuming you have a productReducer
+    cart: cartReducer,
+    // …other slices
+  },
+  preloadedState: {
+    cart: preloadedCart || undefined
+  }
+})
 
-export default store;
+// persist on every change
+store.subscribe(() => {
+  saveCartState(store.getState().cart)
+})
+
+export default store

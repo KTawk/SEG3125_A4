@@ -25,8 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -67,17 +65,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 
-  /* in your global CSS (e.g. index.css) */
-.btn-primary {
-  background-color: #1e3a8a !important;  /* dark-blue */
-  color: #fff !important;
-  border: none !important;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+ .btn-primary {
+  /* existing styles… */
+  display: inline-block;
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+
+  /* increased padding */
+  padding: 0.75rem 1.5rem;    /* top/bottom 12px, left/right 24px */
 }
 .btn-primary:hover {
-  background-color: #1e40af !important;  /* slightly lighter */
+  background-color: #1e3a8a;
 }
+
 
 /* Search bar wrapper */
 .search-wrapper {
@@ -157,7 +161,200 @@ button:focus-visible {
     0 6px 12px rgba(0,0,0,0.15);  /* slightly stronger drop shadow */
 }
 
+/* src/index.css (or Hero.css) */
 
+.hero-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #1e3a8a;      /* dark blue */
+  color: #ffffff;                 /* white text */
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.375rem;        /* 6px */
+  transition:
+  background-color 0.2s ease,
+  transform         0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #162e6c;      /* a tad darker */
+  transform: scale(1.05);
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 4rem;             /* adjust as needed */
+  left: 2rem;            /* push in from the left */
+  padding-left: 4rem;    /* extra shift right */
+  color: white;
+}
+
+/* existing hero-btn styles */
+.hero-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #1e3a8a;
+  color: #fff;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.hero-btn:hover {
+  background-color: #162e6c;
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------------------------------
+   Navbar – make the secondary links larger
+   ------------------------------------------------------------------ */
+.navbar-secondary-link {
+  font-size: 1.125rem;   /* 18px */
+  /* you can tweak to 1.25rem (20px) or whatever feels right */
+  padding: 0.25rem 0;     /* a touch more vertical breathing room */
+}
+
+/* optional: add a bit more letter-spacing to emphasize them */
+.navbar-secondary-link {
+  letter-spacing: 0.025em;
+}
+
+
+/* make the logo bigger + bold */
+.navbar-logo {
+  font-size: 1.5rem;    /* 24px; bump up as you like */
+  font-weight: 800;     /* extra-bold */
+}
+
+/* Cart.css */
+
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #1e3a8a;    /* dark blue */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-button:hover {
+  background-color: #162e6c;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  
+  border-radius: 0.25rem;
+  
+  
+}
+
+.quantity-control button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0;                    /* remove internal padding */
+  margin: 0 0.5rem;              /* push button away from the input */
+}
+
+.quantity-control input {
+  width: 2rem;
+  text-align: center;
+  border: none;
+  padding: 0;                    /* remove internal padding */
+  margin: 0 0.5rem;              /* push input away from the buttons */
+  font-size: 1rem;
+}
+
+
+.place-order-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;         /* same 12px/16px roughly */
+  background-color: #1e40af;     /* dark blue (Tailwind blue-800) */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;        /* 4px */
+  cursor: pointer;
+  transition: background-color .2s ease;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.place-order-btn:hover {
+  background-color: #1e3a8a;     /* slightly darker */
+}
+
+
+/* src/pages/Order.css */
+
+.order-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.order-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.order-summary {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-summary h3,
+.order-summary h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.shipping-info,
+.items-ordered {
+  margin-bottom: 1rem;
+}
+
+.item-row,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.order-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-blue {
+  padding: 0.75rem 1.5rem;
+  background-color: #1e40af;    /* Tailwind’s blue-900 */
+  color: #ffffff;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-blue:hover {
+  background-color: #1e3a8a;    /* Tailwind’s blue-800 */
+}
 
 
 }

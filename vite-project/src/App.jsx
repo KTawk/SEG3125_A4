@@ -7,6 +7,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Order from "./pages/Order"
 import ProductDetail from "./pages/ProductDetail"
+import Contact from "./pages/Contact";
 import { useState } from "react";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/checkout" element={<Checkout setOrder={setOrder}/>} />
           <Route path="/order-confirmation" element={<Order order={order}/>} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

@@ -19,8 +19,10 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <div className="text-2xl font-semibold">
-          <Link to="/">e-<span className="font-bold">SHOP</span></Link>
+        <div>
+          <Link to="/" className="navbar-logo">
+            TECHIFY
+          </Link>
         </div>
 
         <div className="mx-4 w-full max-w-md">
@@ -65,21 +67,22 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Secondary nav */}
-      <div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold text-gray-700">
-        {['/', '/shop', '/contact', '/about'].map((path, i) => {
-          const label = ['Home', 'Shop', 'Contact', 'About'][i];
-          return (
-            <Link
-              key={label}
-              to={path}
-              className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gray-700 hover:after:w-full after:transition-all after:duration-300"
-            >
-              {label}
-            </Link>
-          );
-        })}
-      </div>
+     {/* Secondary nav */}
+<div className="flex items-center justify-center space-x-10 py-4 text-sm font-bold text-gray-700">
+  {['/', '/shop', '/contact', '/about'].map((path, i) => {
+    const label = ['Home', 'Shop', 'Contact', 'About'][i];
+    return (
+      <Link
+      key={path}
+        to={path}
+        className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gray-700 hover:after:w-full after:transition-all after:duration-300"
+      >
+        {label}
+      </Link>
+    );
+  })}
+</div>
+
     </nav>
   );
 };
