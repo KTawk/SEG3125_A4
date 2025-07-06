@@ -10,41 +10,45 @@ const Navbar = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const query = searchTerm.trim();
-    if (query) {
-      navigate(`/shop?search=${encodeURIComponent(query)}`);
-    } else {
-      navigate('/shop');
-    }
+    const q = searchTerm.trim();
+    navigate(q ? `/shop?search=${encodeURIComponent(q)}` : '/shop');
   };
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-screen-xl mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center">
+
         {/* Logo */}
         <div className="text-2xl font-semibold">
           <Link to="/">e-<span className="font-bold">SHOP</span></Link>
         </div>
 
-        {/* Search form */}
-        <div className="relative w-full max-w-md mx-4">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Search Product"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-              className="w-full border border-gray-300 py-2 px-4 rounded-l-md focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="absolute top-0 right-0 h-full px-4 bg-red-500 rounded-r-md flex items-center justify-center"
-            >
-              <FaSearch className="text-white" />
-            </button>
-          </form>
-        </div>
-
+        <div className="mx-4 w-full max-w-md">
+  <form onSubmit={handleSubmit} className="relative">
+    <input
+      type="text"
+      placeholder="Search Product"
+      value={searchTerm}
+      onChange={e => setSearchTerm(e.target.value)}
+      className="
+        w-full h-12
+        bg-white
+        border border-gray-300
+        rounded-full
+        px-4
+        pr-12          /* space for the icon */
+        text-gray-600  /* placeholder/text color */
+        focus:outline-none focus:ring-2 focus:ring-blue-300
+      "
+    />
+    <button
+      type="submit"
+      className="absolute right-3 top-1/2 transform -translate-y-1/2 p-0"
+    >
+      <FaSearch className="text-blue-900 w-5 h-5" />
+    </button>
+  </form>
+</div>
         {/* Cart & Auth */}
         <div className="flex items-center space-x-4 text-gray-700">
           <Link to="/cart" className="relative">
@@ -55,9 +59,6 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-          <button className="hidden md:block bg-gray-100 px-3 py-1 rounded-md shadow-sm">
-            Login | Register
-          </button>
           <button className="block md:hidden">
             <FaUser />
           </button>

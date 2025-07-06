@@ -1,41 +1,57 @@
-import React from 'react'
-import {FaStar} from 'react-icons/fa';
+import React from 'react';
+import { FaStar } from 'react-icons/fa';
 import { addToCart } from '../redux/cartSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
 
-const ProductCard = ({product}) => {
-    const dispatch = useDispatch()
-    const handleAddToCart = (e, product) => {
-        e.stopPropagation()
-        e.preventDefault()
-        dispatch(addToCart(product))
-        alert("Product Added Successfully!")
-    }
-    return (
-        <Link to={`/product/${product.id}`}>
-        <div className='bg-white p-4 shadow rounded relative border
-                    transform transition-transform duration-300 hover:scale-105'>
-            <img src={product.image} alt={product.name} className="w-full h-48 object-contain mb-4"/>
-            <h3 className="text-lg font-semibold">{product.name}</h3>
-            <p className="text-gray-500">${product.price}</p>
-            <div className="flex items-center mt-2">
-                <FaStar className="text-yellow-500"></FaStar>
-                <FaStar className="text-yellow-500"></FaStar>
-                <FaStar className="text-yellow-500"></FaStar>
-                <FaStar className="text-yellow-500"></FaStar>
-            </div>
-            <div
-                className="absolute bottom-4 right-2 flex items-center justify-center w-8 h-8 bg-red-600
-                        group text-white text-sm rounded-full hover:w-32 hover:bg-red-700 transition-all duration-100"
-                        onClick={(e) => handleAddToCart(e, product)}>
-                <span className="group-hover:hidden ">+</span>
-                <span className="hidden group-hover:block">Add to cart</span>
-            </div>
+  // Grab first image from your images object (or fallback to a single image prop)
+  const imagesArray = product.images
+    ? Object.values(product.images)
+    : [product.image];
+  const firstImage = imagesArray[0];
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dispatch(addToCart(product));
+    alert('Product Added Successfully!');
+  };
+
+  return (
+    <Link to={`/product/${product.id}`}>
+      <div
+        className="product-card p-4 relative"
+      >
+        <img
+          src={firstImage}
+          alt={product.name}
+          className="w-full h-48 object-contain mb-4"
+        />
+
+        <h3 className="text-lg font-semibold">{product.name}</h3>
+        <p className="text-gray-500">${product.price.toFixed(2)}</p>
+
+        <div className="flex items-center mt-2">
+          {[...Array(4)].map((_, i) => (
+            <FaStar key={i} className="text-yellow-500" />
+          ))}
         </div>
-        </Link>
-    )
-}
 
-export default ProductCard
+        <button
+          onClick={handleAddToCart}
+          className="
+            absolute bottom-4 right-2 flex items-center justify-center \
+             rounded-full w-8 h-8 group add-to-cart-btn hover:w-32"
+        >
+          <span className="group-hover:hidden">+</span>
+          <span className="hidden group-hover:block">Add to cart</span>
+        </button>
+      </div>
+    </Link>
+  );
+};
+
+export default ProductCard;

@@ -42,10 +42,6 @@ import Image19 from "./Images/OnePlus11_MirrorBlack.png";
 import Image19_1 from "./Images/OnePlus11_EternalGreen.png";
 
 
-
-
-
-
 import Image20 from "./Images/Image20.png";
 import Image20_1 from "./Images/Image20_1.png";
 import Image21 from "./Images/Image21.png";
@@ -69,7 +65,7 @@ import Image29 from "./Images/Image29.jpg";
 import Image30 from "./Images/Image30.jpg";
 import Image30_1 from "./Images/Image30_1.jpg";
 import Image31 from "./Images/Image31.png";
-import Image31_1 from "./Images/Image30_1.png";
+import Image31_1 from "./Images/Image31_1.png";
 import Image32 from "./Images/Image32.jpg";
 import Image33 from "./Images/Image33.png";
 import Image34 from "./Images/Image34.png";
@@ -282,7 +278,7 @@ export const mockData = [
   },
   {
     id: 15,
-    images: {Image15, Image15_1, Image15_2, Image15_3},
+    images: {Image15, Image15_1, Image15_2},
     name: "Galaxy S24",
     price: 899.99,
     category: "Phones",

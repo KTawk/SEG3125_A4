@@ -66,4 +66,98 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  /* in your global CSS (e.g. index.css) */
+.btn-primary {
+  background-color: #1e3a8a !important;  /* dark-blue */
+  color: #fff !important;
+  border: none !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+.btn-primary:hover {
+  background-color: #1e40af !important;  /* slightly lighter */
+}
+
+/* Search bar wrapper */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;       /* tune as needed */
+  margin: 0 auto;
+}
+
+/* The text input */
+.search-input {
+  flex: 1;
+  padding: 0.5rem 1rem;   
+  border: 1px solid #D1D5DB;    /* gray-300 */
+  border-radius: 0.375rem 0 0 0.375rem; /* rounded-l-md */
+  outline: none;
+}
+
+/* Input focus ring (optional) */
+.search-input:focus {
+  border-color: #3B82F6;         /* blue-500 */
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+}
+
+/* The button */
+.search-button {
+  padding: 0.5rem;
+  background-color: #1E3A8A;     /* blue-900 */
+  color: white;
+  border: 1px solid #1E3A8A;
+  border-radius: 0 0.375rem 0.375rem 0; /* rounded-r-md */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover state */
+.search-button:hover {
+  background-color: #1E40AF;     /* blue-800 */
+}
+
+/* Keep the icon sizing consistent */
+.search-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* src/index.css */
+.add-to-cart-btn {
+  background-color: #1e3a8a; /* Tailwind’s blue-900 */
+  color: #fff;
+  transition: all .15s;
+}
+.add-to-cart-btn:hover {
+  background-color: #1e40af; /* Tailwind’s blue-800 */
+}
+
+/* index.css */
+
+.product-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  /* two shadows: 1) an inset “border” in dark blue,
+     2) a soft drop shadow for depth */
+  box-shadow:
+    0 0 0 2px #1e3a8a,            /* blue-900 outline */
+    0 4px 6px rgba(0,0,0,0.1);    /* subtle drop shadow */
+
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 0 2px #1e40af,            /* blue-800 outline on hover */
+    0 6px 12px rgba(0,0,0,0.15);  /* slightly stronger drop shadow */
+}
+
+
+
+
 }

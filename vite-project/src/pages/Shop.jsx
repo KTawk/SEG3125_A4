@@ -5,27 +5,29 @@ import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 
 const Shop = () => {
-  // pull the array of products out of Redux (default to empty array)
   const products = useSelector(state => state.product?.products ?? []);
-
-  // read out ?search=foo
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('search')?.toLowerCase().trim() || '';
 
-  // filter if we have a query (use name instead of title)
-  const filtered = query
-    ? products.filter(p =>
-        p.name?.toLowerCase().includes(query)
-      )
-    : products;
+  const query    = searchParams.get('search')?.toLowerCase().trim()  || '';
+  const brand    = searchParams.get('brand')?.toLowerCase().trim()   || '';
+  const category = searchParams.get('category')?.toLowerCase().trim()|| '';
+
+  const filtered = products.filter(p => {
+    const matchesQuery    = query    ? p.name.toLowerCase().includes(query)         : true;
+    const matchesBrand    = brand    ? p.brand.toLowerCase() === brand             : true;
+    const matchesCategory = category ? p.category.toLowerCase() === category       : true;
+    return matchesQuery && matchesBrand && matchesCategory;
+  });
 
   return (
     <div className="mx-auto py-12 md:px-16 lg:px-24">
       <h2 className="text-2xl font-bold mb-6 text-center">Shop</h2>
 
-      {query && (
+      {(query || brand || category) && (
         <p className="mb-4 text-center">
-          Showing results for <span className="font-semibold">“{query}”</span>
+          {category && <>Category: <span className="font-semibold">{category}</span>. </>}
+          {brand    && <>Brand: <span className="font-semibold">{brand}</span>. </>}
+          {query    && <>Search: <span className="font-semibold">“{query}”</span>.</>}
           {filtered.length === 0 && ' — no matches found.'}
         </p>
       )}
