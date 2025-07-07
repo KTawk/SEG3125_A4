@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="w-full max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Brand */}
       <div>
-        <h3 className="text-xl font-semibold">e-Shop</h3>
+        <h3 className="text-xl font-semibold">TECHIFY</h3>
         <p className="mt-4">
           Your one-stop for all your needs. Shop with ease <br/>
           and experience the best online shopping.
